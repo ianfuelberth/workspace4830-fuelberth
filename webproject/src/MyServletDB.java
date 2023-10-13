@@ -48,7 +48,7 @@ public class MyServletDB extends HttpServlet {
          System.out.println("Failed to make connection!");
       }
       try {
-         String selectSQL = "SELECT * FROM myTable";// WHERE MYUSER LIKE ?";
+         String selectSQL = "SELECT * FROM myTable WHERE MYUSER LIKE ?";
          String theUserName = "user%";
          response.getWriter().println(selectSQL + "<br>");
          response.getWriter().println("------------------------------------------<br>");

@@ -78,6 +78,7 @@ void display(HttpServletResponse response) throws IOException {
     out.println("<body><nav>\n"
     		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormSearch.html\">Search Books</a> <br>\n"
     		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormInsert.html\">Add New Book</a> <br>\n"
+    		+ "<a href=\"/webproject-techexercise-fuelberth/View All\">View Allk</a> <br>\n"
     		+ "</nav></body>");
     out.println("<body><section>");
     Connection connection = null;
@@ -99,12 +100,12 @@ void display(HttpServletResponse response) throws IOException {
           String publisher = rs.getString("publisher").trim();
           String available = String.valueOf(rs.getBoolean("available"));
 
-          
-             out.println("ID: " + id + "\n");
-             out.println("Title: " + name + "\n");
-             out.println("Author: " + author + "\n");
-             out.println("Publisher: " + publisher + "\n");
-             out.println("Available: " + available + "<br>\n\n");
+          out.println("<ul>\n" + //
+          		"  <li><b>Title</b>: " + name + "\n" + //
+          		"  <li><b>Author</b>: " + author + "\n" + //
+          		"  <li><b>Publisher</b>: " + publisher + "\n" + //
+          		"  <li><b>Available</b>: " + String.valueOf(available) + "\n" + //
+	            "</ul>\n");
           
        }
        out.println("</section></body>");

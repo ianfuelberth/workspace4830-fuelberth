@@ -139,8 +139,9 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	    
 	    out.println("<body><header><h1> Search Results </h1></header></body>");
 	    out.println("<body><nav>\n"
-	    		+ "<a href=\"/webproject-techexercise-fuelberth/ViewAll\">View All</a> <br>\n"
+	    		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormSearch.html\">Search Books</a> <br>\n"
 	    		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormInsert.html\">Add New Book</a> <br>\n"
+	    		+ "<a href=\"/webproject-techexercise-fuelberth/View All\">View Allk</a> <br>\n"
 	    		+ "</nav></body>");
 	    out.println("<body><section>");
 	    Connection connection = null;
@@ -169,11 +170,12 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	            String available = String.valueOf(rs.getBoolean("available"));
 
 	            if (keyword.isEmpty() || name.contains(keyword)) {
-	               out.println("ID: " + id + ", ");
-	               out.println("Title: " + name + ", ");
-	               out.println("Author: " + author + ", ");
-	               out.println("Publisher: " + publisher + ", ");
-	               out.println("Available: " + available + "<br>");
+	            	out.println("<ul>\n" + //
+	            			"  <li><b>Title</b>: " + name + "\n" + //
+	            			"  <li><b>Author</b>: " + author + "\n" + //
+	            			"  <li><b>Publisher</b>: " + publisher + "\n" + //
+	            			"  <li><b>Available</b>: " + String.valueOf(available) + "\n" + //
+	            			"</ul>\n");
 	            }
 	         }
 	          

@@ -43,15 +43,43 @@ void display(HttpServletResponse response) throws IOException {
     
     out.println(docType + 
     	"<html>\n" + //
-  		"<head>\n" + //
-  		"<link rel=\"stylesheet\" href=\"style.css></head>");
+  		"<head>\n"
+  		+ "<style>\n"
+  		+ "header {\n"
+  		+ "    background-color:rgb(43, 123, 76);\n"
+  		+ "    color:white;\n"
+  		+ "    text-align:center;\n"
+  		+ "    padding:5px;	 \n"
+  		+ "}\n"
+  		+ "nav {\n"
+  		+ "    line-height:30px;\n"
+  		+ "    background-color:#eeeeee;\n"
+  		+ "    height:300px;\n"
+  		+ "    width:100px;\n"
+  		+ "    float:left;\n"
+  		+ "    padding:5px;	      \n"
+  		+ "}\n"
+  		+ "section {\n"
+  		+ "    width:350px;\n"
+  		+ "    float:left;\n"
+  		+ "    padding:10px;	 	 \n"
+  		+ "}\n"
+  		+ "footer {\n"
+  		+ "    background-color:rgb(43, 123, 76);\n"
+  		+ "    color:white;\n"
+  		+ "    clear:both;\n"
+  		+ "    text-align:center;\n"
+  		+ "    padding:5px;	 	 \n"
+  		+ "}\n"
+  		+ "</style>\n"
+  		+ "</head>\n");
     
     out.println("<body><header><h1> All Books </h1></header></body>");
-    out.println("<nav>\n"
+    out.println("<body><nav>\n"
     		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormSearch.html\">Search Books</a> <br>\n"
     		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormInsert.html\">Add New Book</a> <br>\n"
-    		+ "</nav>");
-    
+    		+ "</nav></body>");
+    out.println("<body><section>");
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     try {
@@ -79,10 +107,12 @@ void display(HttpServletResponse response) throws IOException {
              out.println("Available: " + available + "<br>");
           
        }
-       out.println("<footer>\n"
+       out.println("</section></body>");
+       
+       out.println("<body><footer>\n"
        		+ "	Copyright\n"
-       		+ "</footer>");
-       out.println("</body></html>");
+       		+ "</body></footer>");
+       out.println("</html>");
        rs.close();
        preparedStatement.close();
        connection.close();

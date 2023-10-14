@@ -107,6 +107,7 @@ public class SimpleFormInsert extends HttpServlet {
 		out.println("</body></section>");
 
 		out.println("<body><footer>\n"
+				+ "End of Page\n"
 				+ "</body></footer>");
 		out.println("</html>");
 	}

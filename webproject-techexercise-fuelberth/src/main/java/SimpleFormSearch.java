@@ -178,7 +178,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	       out.println("</section></body>");
 	       
 	       out.println("<body><footer>\n"
-	       		+ "</body></footer>");
+					+ "End of Page\n"
+					+ "</body></footer>");
 	       out.println("</html>");
 	       rs.close();
 	       preparedStatement.close();

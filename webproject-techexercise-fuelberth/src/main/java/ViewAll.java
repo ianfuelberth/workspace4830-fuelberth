@@ -106,6 +106,7 @@ public class ViewAll extends HttpServlet {
 			out.println("</section></body>");
 
 			out.println("<body><footer>\n"
+					+ "End of Page\n"
 					+ "</body></footer>");
 			out.println("</html>");
 			rs.close();

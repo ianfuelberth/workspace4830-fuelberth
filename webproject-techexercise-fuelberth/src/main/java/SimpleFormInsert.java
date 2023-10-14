@@ -67,8 +67,7 @@ public class SimpleFormInsert extends HttpServlet {
 				+ "nav {\n"
 				+ "    line-height:30px;\n"
 				+ "    background-color:#eeeeee;\n"
-				+ "    height:300px;\n"
-				+ "    width:100px;\n"
+				+ "    width:150px;\n"
 				+ "    float:left;\n"
 				+ "    padding:5px;	      \n"
 				+ "}\n"
@@ -82,6 +81,7 @@ public class SimpleFormInsert extends HttpServlet {
 				+ "    color:white;\n"
 				+ "    clear:both;\n"
 				+ "    text-align:center;\n"
+				+ "    height:50px\n"
 				+ "    padding:5px;	 	 \n"
 				+ "}\n"
 				+ "</style>\n"
@@ -107,7 +107,6 @@ public class SimpleFormInsert extends HttpServlet {
 		out.println("</body></section>");
 
 		out.println("<body><footer>\n"
-				+ "	Copyright\n"
 				+ "</body></footer>");
 		out.println("</html>");
 	}

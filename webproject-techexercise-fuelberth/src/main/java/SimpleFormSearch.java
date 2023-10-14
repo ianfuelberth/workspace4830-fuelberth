@@ -105,37 +105,37 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 //	          "<h1 align=\"center\">" + title + "</h1>\n");
 	    
 	    out.println(docType + 
-	    	"<html>\n" + //
-	  		"<head>\n"
-	  		+ "<style>\n"
-	  		+ "header {\n"
-	  		+ "    background-color:rgb(43, 123, 76);\n"
-	  		+ "    color:white;\n"
-	  		+ "    text-align:center;\n"
-	  		+ "    padding:5px;	 \n"
-	  		+ "}\n"
-	  		+ "nav {\n"
-	  		+ "    line-height:30px;\n"
-	  		+ "    background-color:#eeeeee;\n"
-	  		+ "    height:300px;\n"
-	  		+ "    width:100px;\n"
-	  		+ "    float:left;\n"
-	  		+ "    padding:5px;	      \n"
-	  		+ "}\n"
-	  		+ "section {\n"
-	  		+ "    width:350px;\n"
-	  		+ "    float:left;\n"
-	  		+ "    padding:10px;	 	 \n"
-	  		+ "}\n"
-	  		+ "footer {\n"
-	  		+ "    background-color:rgb(43, 123, 76);\n"
-	  		+ "    color:white;\n"
-	  		+ "    clear:both;\n"
-	  		+ "    text-align:center;\n"
-	  		+ "    padding:5px;	 	 \n"
-	  		+ "}\n"
-	  		+ "</style>\n"
-	  		+ "</head>\n");
+				"<html>\n" + //
+				"<head>\n"
+				+ "<style>\n"
+				+ "header {\n"
+				+ "    background-color:rgb(43, 123, 76);\n"
+				+ "    color:white;\n"
+				+ "    text-align:center;\n"
+				+ "    padding:5px;	 \n"
+				+ "}\n"
+				+ "nav {\n"
+				+ "    line-height:30px;\n"
+				+ "    background-color:#eeeeee;\n"
+				+ "    width:150px;\n"
+				+ "    float:left;\n"
+				+ "    padding:5px;	      \n"
+				+ "}\n"
+				+ "section {\n"
+				+ "    width:350px;\n"
+				+ "    float:left;\n"
+				+ "    padding:10px;	 	 \n"
+				+ "}\n"
+				+ "footer {\n"
+				+ "    background-color:rgb(43, 123, 76);\n"
+				+ "    color:white;\n"
+				+ "    clear:both;\n"
+				+ "    text-align:center;\n"
+				+ "    height:50px\n"
+				+ "    padding:5px;	 	 \n"
+				+ "}\n"
+				+ "</style>\n"
+				+ "</head>\n");
 	    
 	    out.println("<body><header><h1> Search Results </h1></header></body>");
 	    out.println("<body><nav>\n"
@@ -183,7 +183,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	       out.println("</section></body>");
 	       
 	       out.println("<body><footer>\n"
-	       		+ "	Copyright\n"
 	       		+ "</body></footer>");
 	       out.println("</html>");
 	       rs.close();

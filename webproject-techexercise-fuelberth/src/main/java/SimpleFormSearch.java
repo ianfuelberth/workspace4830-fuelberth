@@ -98,11 +98,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	    String title = "All Books";
 	    String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
 	          "transitional//en\">\n"; //
-//	    out.println(docType + //
-//	          "<html>\n" + //
-//	          "<section><title>" + title + "</title></head>\n" + //
-//	          "<body bgcolor=\"#f0f0f0\">\n" + //
-//	          "<h1 align=\"center\">" + title + "</h1>\n");
 	    
 	    out.println(docType + 
 				"<html>\n" + //

@@ -2,7 +2,7 @@
 <head>
 <style>
 header {
-    background-color:black;
+    background-color:rgb(43, 123, 76);
     color:white;
     text-align:center;
     padding:5px;	 
@@ -21,7 +21,7 @@ section {
     padding:10px;	 	 
 }
 footer {
-    background-color:black;
+    background-color:rgb(43, 123, 76);
     color:white;
     clear:both;
     text-align:center;
@@ -32,22 +32,23 @@ footer {
 
 <body>
 <header>
-<h1> Insert Data </h1>
+<h1> Add Book To Catalog </h1>
 </header>
 
 <nav>
 <a href="/webproject-techexercise-fuelberth/simpleFormSearch.html">Search Data</a> <br>
+<a href="/webproject-techexercise-fuelberth/viewAll.html">View All Books</a> <br>
 </nav>
 
 <section>
-	<h1>User Input</h1>
+	<h1>Book Info</h1>
 	
 	<form action="SimpleFormInsert" method="POST">
 	
 		Title: <input type="text" name="title"> <br />
 		Author: <input type="text" name="author"> <br />
 		Publisher: <input type="text" name="publisher"> <br />
-		Available: <input type="checkbox" name="available" value="true"><br/>
+		Available: <input type="checkbox" name="available" value="true" checked><br/>
 		
 		<input type="submit" value="Submit" />
 	</form>

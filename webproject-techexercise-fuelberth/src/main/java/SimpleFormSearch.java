@@ -68,7 +68,7 @@ public class SimpleFormSearch extends HttpServlet {
                out.println("Available: " + available + "<br>");
             }
          }
-         out.println("<a href=/webproject/simpleFormSearch.html>Search Data</a> <br>");
+         out.println("<a href=/webproject-techexercise-fuelberth/simpleFormSearch.html>Search Data</a> <br>");
          out.println("</body></html>");
          rs.close();
          preparedStatement.close();

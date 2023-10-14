@@ -26,7 +26,10 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
       String booktitle = request.getParameter("title");
       String author = request.getParameter("author");
       String pub = request.getParameter("publisher");
-      String available = request.getParameter("available");
+      String[] boxValues = request.getParameterValues("available");
+      String boxValue = boxValues[0];
+      Boolean available = Boolean.parseBoolean(boxValue);
+      
 
       Connection connection = null;
       String insertSql = " INSERT INTO libraryTable (id, title, author, publisher, available) values (default, ?, ?, ?, ?)";
@@ -38,7 +41,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
          preparedStmt.setString(1, booktitle);
          preparedStmt.setString(2, author);
          preparedStmt.setString(3, pub);
-         preparedStmt.setString(4, available);
+         preparedStmt.setBoolean(4, available);
          preparedStmt.execute();
          connection.close();
       } catch (Exception e) {
@@ -60,7 +63,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
             "  <li><b>Title</b>: " + booktitle + "\n" + //
             "  <li><b>Author</b>: " + author + "\n" + //
             "  <li><b>Publisher</b>: " + pub + "\n" + //
-            "  <li><b>Available</b>: " + available + "\n" + //
+            "  <li><b>Available</b>: " + String.valueOf(available) + "\n" + //
 
             "</ul>\n");
 

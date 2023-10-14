@@ -59,7 +59,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
             String name = rs.getString("title").trim();
             String author = rs.getString("author").trim();
             String publisher = rs.getString("publisher").trim();
-            String available = rs.getString("available").trim();
+            String available = String.valueOf(rs.getBoolean("available"));
 
             if (keyword.isEmpty() || name.contains(keyword)) {
                out.println("ID: " + id + ", ");

@@ -61,12 +61,12 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
             String title = rs.getString("title");
             String author = rs.getString("author");
             String publisher = rs.getString("publisher");
-            String available = rs.getString("available");
+            Boolean available = rs.getBoolean("available");
             response.getWriter().append("BOOK ID: " + id + "<br>");
             response.getWriter().append("TITLE: " + title + "<br>");
             response.getWriter().append("AUTHOR: " + author + "<br>");
             response.getWriter().append("PUBLISHER: " + publisher + "<br>");
-            response.getWriter().append("AVAILABLE: " + publisher + "<br>");
+            response.getWriter().append("AVAILABLE: " + String.valueOf(available) + "<br>");
          }
       } catch (SQLException e) {
          e.printStackTrace();

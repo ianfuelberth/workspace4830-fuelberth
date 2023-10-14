@@ -39,4 +39,5 @@ public class UtilProp {
    public static String getProp(String key) {
       return prop.getProperty(key).trim();
    }
+   
 }

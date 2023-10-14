@@ -21,7 +21,8 @@ public class SimpleFormInsert extends HttpServlet {
       super();
    }
 
-   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   @Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       String booktitle = request.getParameter("title");
       String author = request.getParameter("author");
       String pub = request.getParameter("publisher");
@@ -67,7 +68,8 @@ public class SimpleFormInsert extends HttpServlet {
       out.println("</body></html>");
    }
 
-   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   @Override
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       doGet(request, response);
    }
 

@@ -1,5 +1,5 @@
 
-public class BookEntry 
+public class BookEntry
 {
 
 }

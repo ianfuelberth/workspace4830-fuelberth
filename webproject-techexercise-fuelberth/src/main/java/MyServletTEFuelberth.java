@@ -23,7 +23,8 @@ public class MyServletTEFuelberth extends HttpServlet {
       super();
    }
 
-   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   @Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setContentType("text/html;charset=UTF-8");
       response.getWriter().println("-------- MySQL JDBC Connection Testing ------------<br>");
       try {
@@ -49,11 +50,11 @@ public class MyServletTEFuelberth extends HttpServlet {
       }
       try {
          String selectSQL = "SELECT * FROM libraryTable";
-         
+
          response.getWriter().println(selectSQL + "<br>");
          response.getWriter().println("------------------------------------------<br>");
          PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
-         
+
          ResultSet rs = preparedStatement.executeQuery();
          while (rs.next()) {
             String id = rs.getString("id");
@@ -72,7 +73,8 @@ public class MyServletTEFuelberth extends HttpServlet {
       }
    }
 
-   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   @Override
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       doGet(request, response);
    }
 }

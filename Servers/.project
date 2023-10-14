@@ -3,6 +3,7 @@
 	<name>Servers</name>
 	<comment></comment>
 	<projects>
+		<project>webproject-techexercise-fuelberth</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>

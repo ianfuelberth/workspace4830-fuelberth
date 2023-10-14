@@ -7,7 +7,7 @@ import java.util.Properties;
 public class UtilProp {
    static final boolean _W = System.getProperty("os.name").toLowerCase().contains("windows");
    static String _PROP_FILENAME_WIN_LOCAL = "C:\\Users\\ifuelberth\\Desktop\\CSCI 4830\\workspace4830\\workspace4830-git-fuelberth\\webproject\\WebContent\\config.properties";
-   static String _PROP_FILENAME_OSX_LOCAL = "/Users/ifuelberth/Desktop/CSCI 4830/workspace4830/workspace4830-git-fuelberth/webproject-techexercise-fuelberth/WebContent/config.properties";
+   static String _PROP_FILENAME_OSX_LOCAL = "/Users/ifuelberth/Desktop/CSCI 4830/workspace4830/workspace4830-git-fuelberth/webproject-techexercise-fuelberth/src/main/webapp/config.properties";
    // * Remote server path
 
    static String _PROP_FILENAME_REMOTE = "/var/lib/tomcat9/webapps/webproject-techexercise-fuelberth/config.properties";

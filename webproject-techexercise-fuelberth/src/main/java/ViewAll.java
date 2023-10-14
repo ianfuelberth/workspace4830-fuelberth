@@ -32,15 +32,32 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 void display(HttpServletResponse response) throws IOException {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    String title = "Database Result";
+    String title = "All Books";
     String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
           "transitional//en\">\n"; //
-    out.println(docType + //
-          "<html>\n" + //
-          "<head><title>" + title + "</title></head>\n" + //
-          "<body bgcolor=\"#f0f0f0\">\n" + //
-          "<h1 align=\"center\">" + title + "</h1>\n");
-
+//    out.println(docType + //
+//          "<html>\n" + //
+//          "<section><title>" + title + "</title></head>\n" + //
+//          "<body bgcolor=\"#f0f0f0\">\n" + //
+//          "<h1 align=\"center\">" + title + "</h1>\n");
+    
+    out.println(docType + 
+    	"<html>\n" + //
+  		"<head>\n" + //
+  		"<style>\n" + //
+  		"header { backkground-color: rgb(43,123,76); color: white; text-align:center; padding:5px; } \n" + //
+  		"nav { line-height:40px; background-color: #eeeeee; height:300px; width:100px; float:left; padding:5px; } \n" + //
+  		"section { width: 350px; float:left; padding:10px; } \n" + //
+  		"footer { background-color: rgb(43,123,76); color:white; clear:both; text-align:center; padding:5px; } \n" + //
+  		"</style>\n" + //
+    	"</head>\n");
+    
+    out.println("<body><header><h1> All Books </h1></header></body>");
+    out.println("<nav>\n"
+    		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormSearch.html\">Search Books</a> <br>\n"
+    		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormInsert.html\">Add New Book</a> <br>\n"
+    		+ "</nav>");
+    
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     try {
@@ -68,7 +85,9 @@ void display(HttpServletResponse response) throws IOException {
              out.println("Available: " + available + "<br>");
           
        }
-       out.println("<a href=/webproject-techexercise-fuelberth/simpleFormSearch.html>Search Data</a> <br>");
+       out.println("<footer>\n"
+       		+ "	Copyright\n"
+       		+ "</footer>");
        out.println("</body></html>");
        rs.close();
        preparedStatement.close();

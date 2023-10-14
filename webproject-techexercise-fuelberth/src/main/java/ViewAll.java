@@ -44,13 +44,7 @@ void display(HttpServletResponse response) throws IOException {
     out.println(docType + 
     	"<html>\n" + //
   		"<head>\n" + //
-  		"<style>\n" + //
-  		"header { backkground-color: rgb(43,123,76); color: white; text-align:center; padding:5px; } \n" + //
-  		"nav { line-height:40px; background-color: #eeeeee; height:300px; width:100px; float:left; padding:5px; } \n" + //
-  		"section { width: 350px; float:left; padding:10px; } \n" + //
-  		"footer { background-color: rgb(43,123,76); color:white; clear:both; text-align:center; padding:5px; } \n" + //
-  		"</style>\n" + //
-    	"</head>\n");
+  		"<link rel=\"stylesheet\" href=\"style.css></head>");
     
     out.println("<body><header><h1> All Books </h1></header></body>");
     out.println("<nav>\n"

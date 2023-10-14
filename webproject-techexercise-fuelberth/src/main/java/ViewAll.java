@@ -100,11 +100,11 @@ void display(HttpServletResponse response) throws IOException {
           String available = String.valueOf(rs.getBoolean("available"));
 
           
-             out.println("ID: " + id + ", ");
-             out.println("Title: " + name + ", ");
-             out.println("Author: " + author + ", ");
-             out.println("Publisher: " + publisher + ", ");
-             out.println("Available: " + available + "<br>");
+             out.println("ID: " + id + "\n");
+             out.println("Title: " + name + "\n");
+             out.println("Author: " + author + "\n");
+             out.println("Publisher: " + publisher + "\n");
+             out.println("Available: " + available + "<br>\n\n");
           
        }
        out.println("</section></body>");

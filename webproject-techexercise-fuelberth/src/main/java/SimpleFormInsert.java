@@ -68,6 +68,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
             "</ul>\n");
 
       out.println("<a href=/webproject-techexercise-fuelberth/simpleFormSearch.html>Search Data</a> <br>");
+      out.println("<a href=/webproject-techexercise-fuelberth/ViewAll>View All</a> <br>");
+      
       out.println("</body></html>");
    }
 

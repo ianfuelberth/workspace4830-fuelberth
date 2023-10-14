@@ -88,11 +88,11 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
   	  		+ "</head>\n");
   	    
   	    out.println("<body><header><h1> Search Results </h1></header></body>");
-  	    out.println("<body><nav>\n"
-  	    		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormSearch.html\">Search Books</a> <br>\n"
-  	    		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormInsert.html\">Add New Book</a> <br>\n"
-  	    		+ "<a href=\"/webproject-techexercise-fuelberth/View All\">View Allk</a> <br>\n"
-  	    		+ "</nav></body>");
+  	  out.println("<body><nav>\n"
+      		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormSearch.html\">Search Books</a> <br>\n"
+      		+ "<a href=\"/webproject-techexercise-fuelberth/simpleFormInsert.html\">Add New Book</a> <br>\n"
+      		+ "<a href=\"/webproject-techexercise-fuelberth/ViewAll\">View All</a> <br>\n"
+      		+ "</nav></body>");
   	    out.println("<body><section>");
       
   	    out.println(
